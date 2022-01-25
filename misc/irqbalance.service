@@ -7,7 +7,8 @@ ConditionVirtualization=!container
 [Service]
 EnvironmentFile=-/usr/lib/irqbalance/defaults.env
 EnvironmentFile=-/path/to/irqbalance.env
-ExecStart=/usr/sbin/irqbalance --foreground $IRQBALANCE_ARGS
+Type=oneshot
+ExecStart=/usr/sbin/irqbalance --oneshot
 ReadOnlyPaths=/
 ReadWritePaths=/proc/irq
 RestrictAddressFamilies=AF_UNIX
