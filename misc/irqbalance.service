@@ -14,6 +14,7 @@ ReadOnlyPaths=/
 ReadWritePaths=/proc/irq
 RestrictAddressFamilies=AF_UNIX AF_NETLINK
 RuntimeDirectory=irqbalance/
+LimitNOFILE=4096
 
 [Install]
 WantedBy=multi-user.target
