@@ -9,12 +9,12 @@ ConditionCPUs=>1
 EnvironmentFile=-/usr/lib/irqbalance/defaults.env
 EnvironmentFile=-/path/to/irqbalance.env
 Type=oneshot
-ExecStart=/usr/sbin/irqbalance --oneshot
+ExecStart=/usr/sbin/irqbalance --oneshot $IRQBALANCE_ARGS
 ReadOnlyPaths=/
 ReadWritePaths=/proc/irq
 RestrictAddressFamilies=AF_UNIX AF_NETLINK
 RuntimeDirectory=irqbalance/
-LimitNOFILE=4096
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
